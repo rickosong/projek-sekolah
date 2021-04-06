@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pendataan Kotak P3K</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css" />>
+    <link rel="stylesheet" href="../css/p3k.css">
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand" href="home.html"><img src="../picture/download.jpg" alt="Logo PDAM Bandarmasih" title="Logo PDAM Bandarmasih"> <span class="Website">Website</span> <span class="K3LH-text">K3LH </span> <span class ="PDAM-text">PDAM Bandarmasih</span></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+              <!--navbar biasa-->
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="serbaserbi.html">serba-serbi K3LH</a>
+              </li>
+
+              <!--navbar dropdown-->
+              <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#pendataan" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        pendataan
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="p3k.html">Kotak P3K</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="hasil.html">Hasil Pendataan Kotak P3K</a>
+                      </li>
+
+              <!--navbar biasa-->
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="profil.html">profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="../html/loginpage.html">log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+     </div>
+   <!--navbar end-->
+
+    <!--form pendataan-->
+    <section class="container-fluid">
+      <section class="row justify-content-center">
+        <section class="col-12 col-sn-6 col-md-5">
+          <form class="form-container">
+            <div class="form-group">
+            <div class="form-group">
+              <h1>Pendataan kotak P3K</h1>
+              <hr>
+              <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi yang akan di cek kotak P3K-nya di kolom di bawah ini, beserta dengan tanggal pengisiannya.</p>
+              <label for="lokasi">Lokasi :</label>
+              <input type="text" class="form-control" id="lokasi" placeholder="Nama lokasi" />
+            </div>
+            <label for="Tanggal">Tanggal :</label>
+              <input type="date" class="form-control" id="Tanggal" placeholder="Tanggal" />
+            </div>
+            <a href="pendataan.html" type="submit" class="btn btn-primary">Masuk</a>
+          </form>
+        </section>
+      </section>
+    </section>
+    <br><br><br><br><br><br>
+    <!--form pendataan end-->
+    
+    <!--javascript-->
+    <script src="../js/jquery-3.6.0.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
