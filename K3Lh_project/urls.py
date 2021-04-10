@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from K3Lh_website.views import login, home
+from K3Lh_website.views import login, home, serbaserbi, pendataan, p3k, hasil, profil
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login, name='login'),
     path('home/', home, name='home'),
+    path('serbaserbi/', serbaserbi),
+    path('pendataan/', pendataan),
+    path('p3k/', p3k),
+    path('hasil/', hasil),
+    path('profil/', profil),
 ]
