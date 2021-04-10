@@ -20,6 +20,6 @@ from K3Lh_website.views import login, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login, name='home'),
-    path('home/', home, name='login'),
+    path('login/', login, name='login'),
+    path('home/', home, name='home'),
 ]
