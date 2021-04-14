@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from K3Lh_website.models import Kotak
+from K3Lh_website.forms import FormKotak
 
 # Create your views here.
 def login(request):
@@ -15,7 +16,13 @@ def pendataan(request):
     return render(request, 'pendataan.html')
 
 def p3k(request):
-    return render(request, 'p3k.html')
+    form = FormKotak()
+
+    konteks = {
+        'form' : form
+    }
+
+    return render(request, 'p3k.html', konteks)
 
 def hasil(request):
     box = Kotak.objects.all()

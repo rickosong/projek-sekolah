@@ -55,19 +55,17 @@
     <section class="container-fluid">
       <section class="row justify-content-center">
         <section class="col-12 col-sn-6 col-md-5">
-          <form class="form-container">
-            <div class="form-group">
-            <div class="form-group">
+          <form action="'p3k" method="post" class="form-container">
               <h1>Pendataan kotak P3K</h1>
               <hr>
               <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi yang akan di cek kotak P3K-nya di kolom di bawah ini, beserta dengan tanggal pengisiannya.</p>
-              <label for="lokasi">Lokasi :</label>
-              <input type="text" class="form-control" id="lokasi" placeholder="Nama lokasi" />
-            </div>
-            <label for="Tanggal">Tanggal :</label>
-              <input type="date" class="form-control" id="Tanggal" placeholder="Tanggal" />
-            </div>
-            <a href="{% url 'pendataan' %}" type="submit" class="btn btn-primary">Masuk</a>
+            <div class="form-group col-md-5">
+
+              {{ form.as_p }}
+
+              <button class="btn btn-primary">Submit</button>
+
+            <div class="form-group">
           </form>
         </section>
       </section>
