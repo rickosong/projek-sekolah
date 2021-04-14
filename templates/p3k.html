@@ -55,10 +55,13 @@
     <section class="container-fluid">
       <section class="row justify-content-center">
         <section class="col-12 col-sn-6 col-md-5">
+          {% if pesan %}
+            <div class="alert alert-success">{{ pesan }}</div>
+          {% endif %}
           <form action="/p3k/" method="post" class="form-container">
               <h1>Pendataan kotak P3K</h1>
               <hr>
-              <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi yang akan di cek kotak P3K-nya di kolom di bawah ini, beserta dengan tanggal pengisiannya.</p>
+              <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi, tanggal, dan pilih keadaannya. Apabila keadaannya adalah "Lengkap", maka tidak usah diisi keterangannya dan apabila keadaannya adalah "Tidak Lengkap", dimohon untuk mengisi keterangannya </p>
             <div class="form-group col-md-5">
               {% csrf_token %}
 

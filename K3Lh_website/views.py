@@ -21,9 +21,11 @@ def p3k(request):
         if form.is_valid():
             form.save()
             form = FormKotak()
+            pesan = 'Data Berhasil Disimpan di Dalam Hasil'
 
             konteks = {
-                'form' : form
+                'form' : form,
+                'pesan' : pesan,
             }
 
             return render(request, 'p3k.html', konteks)
@@ -32,7 +34,7 @@ def p3k(request):
         form = FormKotak()
 
         konteks = {
-            'form' : form
+            'form' : form,
         }
 
         return render(request, 'p3k.html', konteks)
@@ -41,7 +43,7 @@ def hasil(request):
     box = Kotak.objects.all()
 
     konteks = {
-        'box' : box
+        'box' : box,
     }
 
     return render(request, 'hasil.html', konteks)
