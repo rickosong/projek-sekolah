@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from K3Lh_website.models import Kotak
 
 # Create your views here.
 def login(request):
@@ -17,7 +18,13 @@ def p3k(request):
     return render(request, 'p3k.html')
 
 def hasil(request):
-    return render(request, 'hasil.html')
+    box = Kotak.objects.all()
+
+    konteks = {
+        'box' : box
+    }
+
+    return render(request, 'hasil.html', konteks)
 
 def profil(request):
     return render(request, 'profil.html')

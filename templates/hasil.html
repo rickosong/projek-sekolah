@@ -56,7 +56,7 @@
     <!--table 1-->
     <div class="container mt-auto">
       <div class="table-responsive">
-        <table class="table table-sm table-bordered">
+        <table class="table table-sm table-bordered table-striped">
           <thead>
               <tr>
                   <th colspan="6"><h2>CEKLIST ISI KOTAK P3K</h2></th>
@@ -69,17 +69,18 @@
             </tr>
           </thead>
           <tbody>
+            {% for Kotak in box %}
             <tr>
-              <td class="kiri">Ruang Sumber Daya Manusia</td>
-              <td>27 Maret 2021</td>
-              <td>Tidak Lengkap</td>
-              <td>Perban Habis, Masker hanya tersisa 2 lembar dari 1 kotak, tidak ada gunting dan peniti</td>
+              <td class="kiri">{{ Kotak.lokasi }}</td>
+              <td>{{ Kotak.tanggal }}</td>
+              <td>{{ Kotak.keadaan }}</td>
+              <td>{{ Kotak.keterangan }}</td>
             </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>
       <br>
-      <button class="btn btn-light">Submit</button>
     </div>
     <br><br><br><br><br><br><br>
     <!--table end-->
