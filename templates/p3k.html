@@ -55,11 +55,12 @@
     <section class="container-fluid">
       <section class="row justify-content-center">
         <section class="col-12 col-sn-6 col-md-5">
-          <form action="'p3k" method="post" class="form-container">
+          <form action="/p3k/" method="post" class="form-container">
               <h1>Pendataan kotak P3K</h1>
               <hr>
               <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi yang akan di cek kotak P3K-nya di kolom di bawah ini, beserta dengan tanggal pengisiannya.</p>
             <div class="form-group col-md-5">
+              {% csrf_token %}
 
               {{ form.as_p }}
 

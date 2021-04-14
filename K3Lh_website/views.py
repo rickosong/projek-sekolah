@@ -16,13 +16,26 @@ def pendataan(request):
     return render(request, 'pendataan.html')
 
 def p3k(request):
-    form = FormKotak()
+    if request.POST:
+        form = FormKotak(request.POST)
+        if form.is_valid():
+            form.save()
+            form = FormKotak()
 
-    konteks = {
-        'form' : form
-    }
+            konteks = {
+                'form' : form
+            }
 
-    return render(request, 'p3k.html', konteks)
+            return render(request, 'p3k.html', konteks)
+
+    else:
+        form = FormKotak()
+
+        konteks = {
+            'form' : form
+        }
+
+        return render(request, 'p3k.html', konteks)
 
 def hasil(request):
     box = Kotak.objects.all()
