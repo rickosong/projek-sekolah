@@ -8,8 +8,8 @@ class FormKotak(ModelForm):
         fields = '__all__'
 
         widgets = {
-            'lokasi' : forms.TextInput({ 'class' : 'form-cotrol' }),
-            'tanggal' : forms.TextInput({ 'class' : 'form-cotrol' }),
-            'keadaan' : forms.Select({ 'class' : 'form-cotrol' }),
-            'keterangan' : forms.TextInput({ 'class' : 'form-cotrol' }),
+            'lokasi' : forms.TextInput({ 'class' : 'form-control' }),
+            'tanggal' : forms.TextInput({ 'class' : 'form-control' }),
+            'keadaan' : forms.Select({ 'class' : 'form-control' }),
+            'keterangan' : forms.TextInput({ 'class' : 'form-control' }),
         }
