@@ -92,3 +92,12 @@ li.nav-item a.dropdown-item:hover {
   display: block;
 }
 /*navbar end*/
+
+/* tabs */
+.nav-tabs a.nav-link:hover {
+  background-color: rgb(0, 81, 255);
+  color: white;
+  font-weight: 400;
+  text-decoration: white none;
+  text-transform: capitalize;
+}

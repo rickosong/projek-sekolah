@@ -58,19 +58,45 @@
           <form action="" method="POST" class="form-container">
               <h1>Pendataan kotak P3K</h1>
               <hr>
-              <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi, tanggal, dan pilih keadaannya. Apabila keadaannya adalah "Lengkap", maka tidak usah diisi keterangannya dan apabila keadaannya adalah "Tidak Lengkap", dimohon untuk mengisi keterangannya </p>
-            <div class="form-group col-md-12">
-              {% csrf_token %}
+      
+              <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#form" role="tab" aria-controls="home" aria-selected="true">Form</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#petunjuk" role="tab" aria-controls="profile" aria-selected="false">Petunjuk</a>
+                  </li>
+              </ul>
+            </div>
 
-              {{ form.as_p }}
+            <div class="tab-content" id="myTabContent">
+             <div class="tab-pane fade show active" id="form" role="tabpanel" aria-labelledby="home-tab">
+                <div class="form-group col-md-12">
+                  <br>
 
-              <button class="btn btn-primary">Simpan</button>
+                  {% csrf_token %}
 
-            <div class="form-group">
-          </form>
+                  {{ form.as_p }}
+
+                  <button class="btn btn-primary btn-block">Simpan</button>
+
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="petunjuk" role="tabpanel" aria-labelledby="profile-tab">
+                <br>
+                <h2>Petunjuk</h2>
+                <br>
+                   <p>Ini adalah pendataan kotak P3K, dimohon untuk mengisi nama lokasi, tanggal, dan pilih keadaannya. Apabila keadaannya adalah "Lengkap", maka tidak usah diisi keterangannya dan apabila keadaannya adalah "Tidak Lengkap", dimohon untuk mengisi keterangannya </p>
+              </div>
+            </div>
         </section>
       </section>
     </section>
+
+
+
     <br><br><br><br><br><br>
 
     <div class="container justify-content-center">
