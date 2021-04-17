@@ -78,9 +78,9 @@
               <td>{{ Kotak.keadaan }}</td>
               <td>{{ Kotak.keterangan }}</td>
               <td>
-                <a href="{% url 'edit' Kotak.id %}" class="btn btn-dark btn-sm">Ubah</a>
+                <a href="{% url 'edit' Kotak.id %}" class="btn btn-dark btn-sm">✎</a>
               </td>
-              <td><a href="{% url 'hapus' Kotak.id %}" class="btn btn-danger btn-sm">Hapus</a></td>
+              <td><a href="{% url 'hapus' Kotak.id %}" class="btn btn-danger btn-sm">✕</a></td>
             </tr>
             {% endfor %}
           </tbody>
