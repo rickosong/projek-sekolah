@@ -1,6 +1,39 @@
 body {
-  background-color: rgb(42, 135, 235);
-  margin-top: 100px;
+  background-color: whitesmoke;
+  margin-top: 120px;
+}
+
+h1 {
+  font-weight: 700;
+  color: rgb(0, 81, 255);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+  top: 15vh;
+}
+
+.card {
+  padding: 30px;
+}
+
+.btn {
+  padding-left:95px;
+  padding-right:95px;
+}
+
+/*navbar*/
+.navbar {
+  box-shadow: 0 2px 2px 0 rgba(157, 157, 157, 0.529);  
 }
 
 .Website {
@@ -20,6 +53,7 @@ body {
   color: rgb(0, 81, 255);
   font-size: 18px;
 }
+
 .navbar-brand img {
   margin-right: 5px;
   width: 35px;
@@ -65,53 +99,4 @@ li.nav-item a.dropdown-item:hover {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-/*navbar end*/
-
-.table {
-  background-color: white;
-}
-
-th {
-  text-align: center;
-}
-
-th h2 {
-  font-weight: 700;
-}
-
-td {
-  text-transform: capitalize;
-  text-align: center;
-}
-
-td.kiri {
-  text-transform: capitalize;
-  text-align: left;
-}
-
-button.btn {
-  width: 30%;
-  float: right;
-}
-
-td input {
-  border: none;
-  text-align: center;
-  width: 100px;
-  height: fit-content;
-}
-
-td input:focus {
-  border: none;
-  text-align: center;
-  width: 100px;
-  height: fit-content;
-}
-
-td input:active {
-  border: none;
-  text-align: center;
-  width: 100px;
-  height: fit-content;
 }

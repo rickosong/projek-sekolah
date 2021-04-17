@@ -4,6 +4,10 @@ body {
 }
 
 /*navbar*/
+.navbar {
+  box-shadow: 0 2px 2px 0 rgba(157, 157, 157, 0.529);  
+}
+
 .Website {
   color: rgb(0, 81, 255);
   font-weight: 500;

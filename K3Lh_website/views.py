@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from K3Lh_website.models import Kotak
 from K3Lh_website.forms import FormKotak
 
@@ -12,32 +12,31 @@ def home(request):
 def serbaserbi(request):
     return render(request, 'serbaserbi.html')
 
-def pendataan(request):
-    return render(request, 'pendataan.html')
-
 def p3k(request):
-    if request.POST:
+
+    form = FormKotak()
+    if request.method == 'POST':
+        print('Printing POST:', request.POST)
         form = FormKotak(request.POST)
         if form.is_valid():
             form.save()
-            form = FormKotak()
-            pesan = 'Data Berhasil Disimpan di Dalam Hasil'
+            return redirect('/hasil/')
 
-            konteks = {
-                'form' : form,
-                'pesan' : pesan,
-            }
+    konteks= {'form':form}
+    return render(request, 'p3k.html', konteks)
 
-            return render(request, 'p3k.html', konteks)
 
-    else:
-        form = FormKotak()
+def edit(request, pk):
+    box = Kotak.objects.get(id=pk)
+    form = FormKotak(instance=box)
+    if request.method == 'POST':
+        form = FormKotak(request.POST, instance=box)
+        if form.is_valid():
+            form.save()
+            return redirect('/hasil/')
 
-        konteks = {
-            'form' : form,
-        }
-
-        return render(request, 'p3k.html', konteks)
+    konteks = {'form':form}
+    return render(request, 'p3k.html', konteks)
 
 def hasil(request):
     box = Kotak.objects.all()
@@ -47,6 +46,15 @@ def hasil(request):
     }
 
     return render(request, 'hasil.html', konteks)
+
+def hapus(request, pk):
+    box = Kotak.objects.get(id=pk)
+    if request.method == 'POST':
+        box.delete()
+        return redirect('/hasil/')
+        
+    konteks = {'item':box}
+    return render(request, 'hapus.html', konteks)
 
 def profil(request):
     return render(request, 'profil.html')

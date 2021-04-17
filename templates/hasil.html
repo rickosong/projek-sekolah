@@ -66,6 +66,8 @@
               <th scope="col">TANGGAL ISI</th>
               <th scope="col">KEADAAN</th>
               <th scope="col">KETERANGAN</th>
+              <th scope="col">UBAH</th>
+              <th scope="col">HAPUS</th>
             </tr>
           </thead>
           <tbody>
@@ -75,6 +77,10 @@
               <td>{{ Kotak.tanggal }}</td>
               <td>{{ Kotak.keadaan }}</td>
               <td>{{ Kotak.keterangan }}</td>
+              <td>
+                <a href="{% url 'edit' Kotak.id %}" class="btn btn-dark btn-sm">Ubah</a>
+              </td>
+              <td><a href="{% url 'hapus' Kotak.id %}" class="btn btn-danger btn-sm">Hapus</a></td>
             </tr>
             {% endfor %}
           </tbody>
