@@ -7,7 +7,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/hapus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hapuss.css' %}">
   </head>
   <body>
       <!--navbar-->
@@ -43,7 +43,7 @@
                 <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'profil' %}">profil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'login' %}">log out</a>
+                <a class="nav-link js-scroll-trigger" id="navbar-merah" href="{% url 'login' %}">log out</a>
               </li>
             </ul>
           </div>
@@ -55,7 +55,7 @@
     <!--form-->
     <section class="container-fluid">
       <section class="row justify-content-center">
-        <section class="col-12 col-sn-6 col-md-5">
+        <section class="col-12 col-sm-6 col-md-5">
           <form action="{% url 'hapus' item.id %}" method="POST" class="form-container card">
               <h1>Hapus</h1>
               <hr>
@@ -63,8 +63,8 @@
             <div class="form-group mt-4">
 
               {% csrf_token %}
-              <a href="{% url 'hasil' %}" class="btn btn-info">Batal</a>
-              <button class="btn btn-danger">Hapus</button>
+              <a href="{% url 'hasil' %}" class="btn btn-info col-12 mt-3 justify-content-center">Batal</a>
+              <button class="btn btn-danger col-12 mt-3">Hapus</button>
 
             <div class="form-group">
           </form>

@@ -54,6 +54,20 @@ li.nav-item a#navbar-biasa:hover {
   background-color: rgb(0, 81, 255);
 }
 
+li.nav-item a#navbar-merah {
+  color: rgb(0, 81, 255);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+li.nav-item a#navbar-merah:hover {
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: rgb(228, 4, 4);
+}
+
+
 li.nav-item a.dropdown-item {
   font-weight: 400;
   text-transform: capitalize;
