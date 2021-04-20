@@ -45,7 +45,7 @@ def hasil(request):
         'box' : box,
     }
 
-    return render(request, 'hasil.html', konteks)
+    return render(request, 'hasill.html', konteks)
 
 def hapus(request, pk):
     box = Kotak.objects.get(id=pk)
