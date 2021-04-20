@@ -14,18 +14,23 @@
     <section class="container-fluid">
       <section class="row justify-content-center">
         <section class="col-12 col-sn-6 col-md-4">
-          <form class="form-container">
+          <form class="form-container" method="POST" action="">
             <div class="form-group">
+              {% csrf_token %}
               <h2><img src="{% static 'image/download.jpg' %}" alt="Logo PDAM Bandarmasih" title="Logo PDAM Bandarmasih" />PDAM <span>Bandarmasih</span></h2>
-              <hr />
-              <label for="username">Username</label>
-              <input type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Masukkan Username" />
+              <hr>
+              <label for="username">Username:</label>
+              <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Masukkan Username" />
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Masukkan Password" />
+              <label for="password">Password:</label>
+              <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan Password" />
             </div>
-            <a href="{% url 'home' %}" type="submit" class="btn btn-primary btn-block">Masuk</a>
+            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+
+            {% for message in messages %}
+              <p id="messages" class="alert alert-danger mt-3">{{ message }}</p>
+            {% endfor %}
           </form>
         </section>
       </section>

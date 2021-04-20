@@ -20,7 +20,8 @@ from K3Lh_website.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login, name='login'),
+    path('login/', loginpage, name='login'),
+    path('logout/', logoutUser, name='logout'),
     path('home/', home, name='home'),
     path('serbaserbi/', serbaserbi, name = 'serbaserbi'),
     path('edit/<str:pk>/', edit, name = 'edit'),
