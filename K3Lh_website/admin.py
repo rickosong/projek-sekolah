@@ -1,5 +1,5 @@
 from django.contrib import admin
-from K3Lh_website.models import Kotak, Keadaan
+from K3Lh_website.models import *
 
 # Register your models here.
 class KotakAdmin(admin.ModelAdmin):
@@ -10,3 +10,5 @@ class KotakAdmin(admin.ModelAdmin):
 
 admin.site.register(Kotak, KotakAdmin)
 admin.site.register(Keadaan)
+admin.site.register(Jabatan)
+admin.site.register(Pengguna)

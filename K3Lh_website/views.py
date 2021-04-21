@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from K3Lh_website.models import Kotak
+from K3Lh_website.models import Kotak, Pengguna
 from K3Lh_website.forms import FormKotak
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -87,4 +87,7 @@ def hapus(request, pk):
 
 @login_required(login_url='login')
 def profil(request):
-    return render(request, 'profil.html')
+    pengguna = Pengguna.objects.all()
+
+    konteks = {'pengguna':pengguna}
+    return render(request, 'Profil.html', konteks)
