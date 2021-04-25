@@ -58,17 +58,16 @@
 				<div class="row">
 					<div class="col-md-3">
 						<div class="profile-img">
-							<img class="logo" src="{% static 'image/person-circle.svg' %}" alt="logo user" title="logo user"/>
+							<img class="logo rounded-circle account-img" src="{{ user.profile.image.url }}" alt="logo user" title="logo user"/>
 							<br>
 							<small>Mohon gunakan gambar yang ukurannya 1:1 agar menjadi lebih bagus</small>
 							<br>
 						</div>
 					</div>
-					{%for Pengguna in pengguna %}
 					<div class="col-md-6">
 						<div class="profile-head">
-							<h5>{{ Pengguna.nama }}</h5>
-							<h6>{{ Pengguna.jabatan}}</h6>
+							<h5>{{ user.profile.nama }}</h5>
+							<h6>{{ user.profile.jabatan }}</h6>
 							<br>
 							<hr color="black">
 						</div>
@@ -84,15 +83,15 @@
 										<label>Nama</label>
 									</div>
 									<div class="col-md-6">
-										<p>{{ Pengguna.nama }}</p>
+										<p>{{ user.profile.nama }}</p>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-6">
-										<label>NIK</label>
+										<label>NIK/NIS</label>
 									</div>
 									<div class="col-md-6">
-										<p>{{ Pengguna.NIK}}</p>
+										<p>{{ user.profile.NIK }}</p>
 									</div>
 								</div>
 								<div class="row">
@@ -100,7 +99,7 @@
 										<label>Jabatan</label>
 									</div>
 									<div class="col-md-6">
-										<p>{{ Pengguna.jabatan}}</p>
+										<p>{{ user.profile.jabatan }}</p>
 									</div>
 								</div>
 								<div class="row">
@@ -108,7 +107,7 @@
 										<label>No Telp.</label>
 									</div>
 									<div class="col-md-6">
-										<p>{{ Pengguna.nomor}}</p>
+										<p>{{ user.profile.nomor }}</p>
 									</div>
 								</div>
 								<div class="row">
@@ -116,13 +115,12 @@
 										<label>Alamat</label>
 									</div>
 									<div class="col-md-6">
-										<p>{{ Pengguna.alamat}}</p>
+										<p>{{ user.profile.alamat }}</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					{% endfor %}
 				</div>
 			</form>
 		</div>

@@ -23,15 +23,16 @@ class Jabatan(models.Model):
     def __str__(self):
         return self.jabat
 
-class Pengguna(models.Model):
+class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     nama = models.CharField(max_length=100, null =True)
     NIK = models.CharField(max_length=30, null=True)
     jabatan = models.ForeignKey(Jabatan, on_delete = models.CASCADE, null=True)
     nomor = models.CharField(max_length=12, null=True)
     alamat = models.CharField(max_length=300, null=True)
+    image = models.ImageField(default='Gambarprofil.jpg', upload_to='profile_pics')
 
     def __str__(self):
-        return self.nama
+        return f'{self.user.username} Profile'
 
 

@@ -11,4 +11,4 @@ class KotakAdmin(admin.ModelAdmin):
 admin.site.register(Kotak, KotakAdmin)
 admin.site.register(Keadaan)
 admin.site.register(Jabatan)
-admin.site.register(Pengguna)
+admin.site.register(Profile)

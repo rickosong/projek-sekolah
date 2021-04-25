@@ -1,27 +1,26 @@
 from django.shortcuts import render, redirect
-from K3Lh_website.models import Kotak, Pengguna
+from K3Lh_website.models import *
 from K3Lh_website.forms import FormKotak
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from K3Lh_website.decorators import unauthenticated_user
 
 # Create your views here.
+@unauthenticated_user
 def loginpage(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:
-        if request.method == 'POST':
-            username = request.POST.get('username')
-            password = request.POST.get('password')
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
         
-            user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, password=password)
 
-            if user is not None:
-                login(request, user)
-                return redirect('/home/')
-            else:
-                messages.error(request, 'Ada kesalahan dalam Username atau Password Anda')
+        if user is not None:
+            login(request, user)
+            return redirect('/home/')
+        else:
+            messages.error(request, 'Ada kesalahan dalam Username atau Password Anda')
 
     konteks = {}
     return render(request, 'loginpage.html', konteks)
@@ -87,7 +86,4 @@ def hapus(request, pk):
 
 @login_required(login_url='login')
 def profil(request):
-    pengguna = Pengguna.objects.all()
-
-    konteks = {'pengguna':pengguna}
-    return render(request, 'Profil.html', konteks)
+    return render(request, 'Profil.html')
