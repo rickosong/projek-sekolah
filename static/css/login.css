@@ -1,0 +1,32 @@
+body {
+  background-color: whitesmoke;
+  margin-top: 60px;
+}
+
+img {
+  width: 35px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(0, 81, 255);
+  text-align: center;
+}
+
+h2 span {
+  font-weight: 400;
+  font-size: 24px;
+  color: rgb(0, 81, 255);
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+  top: 15vh;
+  position: relative;
+}
