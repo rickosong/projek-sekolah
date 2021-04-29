@@ -1,10 +1,10 @@
 from django.forms import ModelForm
 from django import forms
-from K3Lh_website.models import Kotak
+from K3Lh_website.models import Pendataan
 
-class FormKotak(ModelForm):
+class FormPendataan(ModelForm):
     class Meta:
-        model = Kotak
+        model = Pendataan
         fields = '__all__'
 
         widgets = {

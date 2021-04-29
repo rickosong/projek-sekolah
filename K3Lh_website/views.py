@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from K3Lh_website.models import *
-from K3Lh_website.forms import FormKotak
+from K3Lh_website.forms import FormPendataan
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -40,10 +40,10 @@ def serbaserbi(request):
 @login_required(login_url='login')
 def p3k(request):
 
-    form = FormKotak()
+    form = FormPendataan()
     if request.method == 'POST':
         print('Printing POST:', request.POST)
-        form = FormKotak(request.POST)
+        form = FormPendataan(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/hasil/')
@@ -53,10 +53,10 @@ def p3k(request):
 
 @login_required(login_url='login')
 def edit(request, pk):
-    box = Kotak.objects.get(id=pk)
-    form = FormKotak(instance=box)
+    box = Pendataan.objects.get(id=pk)
+    form = FormPendataan(instance=box)
     if request.method == 'POST':
-        form = FormKotak(request.POST, instance=box)
+        form = FormPendataan(request.POST, instance=box)
         if form.is_valid():
             form.save()
             return redirect('/hasil/')
@@ -66,7 +66,7 @@ def edit(request, pk):
 
 @login_required(login_url='login')
 def hasil(request):
-    box = Kotak.objects.all()
+    box = Pendataan.objects.all()
 
     konteks = {
         'box' : box,
@@ -76,7 +76,7 @@ def hasil(request):
 
 @login_required(login_url='login')
 def hapus(request, pk):
-    box = Kotak.objects.get(id=pk)
+    box = Pendataan.objects.get(id=pk)
     if request.method == 'POST':
         box.delete()
         return redirect('/hasil/')

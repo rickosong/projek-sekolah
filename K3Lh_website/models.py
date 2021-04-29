@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Keadaan(models.Model):
-    jenis = models.CharField(max_length=40)
+    jenis_keadaan = models.CharField(max_length=40)
 
     def __str__(self):
-        return self.jenis
+        return self.jenis_keadaan
 
-class Kotak(models.Model):
+class Pendataan(models.Model):
     lokasi = models.CharField(max_length=90)
     tanggal = models.CharField(max_length=35)
     keadaan = models.ForeignKey(Keadaan, on_delete = models.CASCADE, null=True)

@@ -73,16 +73,16 @@
             </tr>
           </thead>
           <tbody>
-            {% for Kotak in box %}
+            {% for Pendataan in box %}
             <tr>
-              <td class="kiri">{{ Kotak.lokasi }}</td>
-              <td>{{ Kotak.tanggal }}</td>
-              <td>{{ Kotak.keadaan }}</td>
-              <td>{{ Kotak.keterangan }}</td>
+              <td class="kiri">{{ Pendataan.lokasi }}</td>
+              <td>{{ Pendataan.tanggal }}</td>
+              <td>{{ Pendataan.keadaan }}</td>
+              <td>{{ Pendataan.keterangan }}</td>
               <td>
-                <a href="{% url 'edit' Kotak.id %}" class="btn btn-dark btn-sm">✎</a>
+                <a href="{% url 'edit' Pendataan.id %}" class="btn btn-dark btn-sm">✎</a>
               </td>
-              <td><a href="{% url 'hapus' Kotak.id %}" class="btn btn-danger btn-sm">✕</a></td>
+              <td><a href="{% url 'hapus' Pendataan.id %}" class="btn btn-danger btn-sm">✕</a></td>
             </tr>
             {% endfor %}
           </tbody>
