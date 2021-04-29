@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Serba Serbi K3LH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/serbaserbi.css' %}">
+  </head>
+  <body>
+      <!--navbar-->
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'image/download.jpg' %}" alt="Logo PDAM Bandarmasih" title="Logo PDAM Bandarmasih"> <span class="Website">Website</span> <span class="K3LH-text">K3LH </span> <span class ="PDAM-text">PDAM Bandarmasih</span></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+              <!--navbar biasa-->
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'serbaserbi' %}">serba-serbi K3LH</a>
+              </li>
+                  <!--navbar dropdown-->
+              <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#pendataan" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        pendataan
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'p3k' %}">Kotak P3K</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'hasil' %}">Hasil Pendataan Kotak P3K</a>
+                      </li>
+
+              <!--navbar biasa-->
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'profil' %}">profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" id="navbar-merah" href="{% url 'logout' %}">log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+     </div>
+   <!--navbar end-->
+   
+    <!--tabs-->
+    <div class="container">
+      <h1>serba-serbi K3LH</h1>
+      <br /><br />
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#apaituk3lh" role="tab" aria-controls="home" aria-selected="true">Apa Itu K3LH</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#sejarah" role="tab" aria-controls="profile" aria-selected="false">Sejarah K3LH</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#Tugas" role="tab" aria-controls="contact" aria-selected="false">Tugas K3LH</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#Tujuan" role="tab" aria-controls="contact" aria-selected="false">Tujuan K3LH</a>
+        </li>
+      </ul>
+
+      <!--tab content-->
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="apaituk3lh" role="tabpanel" aria-labelledby="home-tab">
+          <h2>Apa Itu K3LH</h2>
+          <br>
+          <p>Keselamatan Kerja adalah suatu usaha yang mungkin dapat memberikan jaminan kondisi kerja yang aman dan sehat untuk mencegah kecelakaan,cacat dan kematian sebagai akibat dari kecelakaan kerja pada setiap karyawan dan untuk melindungi sumber daya manusia yang ada.</p>
+          <br>
+          <p>Kesehatan Kerja adalah suatu kondisi yang optimal/ maksimal dengan menunjukkan keadaan yang fit untuk mendukung terlaksananya suatu kegiatan kerja dalam rangka menyelesaikan proses penyelesaian pekerjaan secara efektif.</p>
+          <br>
+          <p>Sedangkan untuk pengertian K3LH itu sendiri adalah suatu program Kesehatan, Keselamatan Kerja dan Lingkungan Hidup pada suatu perusahaan atau instansi yang memiliki banyak pekerja atau karyawan dengan tujuan utama agar para pekerja dapat dengan aman dan selamat dalam bekerja.</p>
+        </div>
+        <div class="tab-pane fade" id="sejarah" role="tabpanel" aria-labelledby="profile-tab">
+          <h2>Sejarah K3LH</h2>
+          <br>
+          <p>Sejarah keselamatan kerja di Negara Indonesia (k3) di mulai setelah Belanda hadir ke Indonesia pada era ke-17. Saat itu, permasalahan keselamatan kerja di lokasi Indonesia mulai terasa untuk melindungi modal yang ditanam untuk industri. Saat jumlah ketel uap yang dipakai industri Indonesia sekitar 120 ketel uap, hingga munculah undang-undang tentang kerja ketel uap di tahun 1853.</p>
+          <br>
+          <p>Pada tahun 1898, jumlah ketel uap yang dipakai industri kerja makin bertambah jadi 2.277 ketel uap. Tahun 1890 lalu dikeluarkan ketentuan mengenai pemasangan serta penggunaan jaringan listrik di lokasi Indonesia. Menyusul pada tahun 1907, dikeluarkan ketentuan mengenai pengangkutan obat, senjata, petasan, peluru serta beberapa bahan yang bisa meledak serta berdampak pada keselamatan kerja.</p>
+          <br>
+          <p>Veiligheids Reglement serta pengaturan khusus menjadi pelengkap ketentuan pengerjaannya dikeluarkan pada tahun 1905. Lalu direvisi pada tahun 1910 di mana pengawasan undang-undang kerja dikerjakan oleh Veiligheids Toezich. Sedang pada tahun 1912 muncul pelarang pada pemakaian fosfor putih.</p>
+          <br>
+          <p>Undang-undang pengawasan kerja yang berisi kesehatan serta keselamatan kerja atau K3 dikeluarkan tahun 1916. Pada tahun 1927 lahir undang-undang masalah serta di tahun 1930 pemerintah Hindia Belanda membuat revisi undang-undang ketel uap.Riwayat keselamatan kerja di Negara Indonesia (k3) di mulai setelah Belanda hadir ke Indonesia pada era ke-17.</p>
+          <br>
+          <p>Saat terjadi perang dunia ke II, sedikit catatan riwayat tentang keselamatan dan kesehatan industri kerja, karena waktu itu masih dalam situasi perang hingga banyak industri yang berhenti beroprasi. Semenjak zaman kemerdekaan, riwayat keselamatan kerja berkembang sama dengan dinamika bangsa Indonesia. Beberapa waktu setelah Proklamasi, undang-undang kerja serta undang-undang kecelakaan (khususnya tersangkut permasalahan kompensasi) mulai dibuat. Di tahun 1957 didirikanlah Instansi Kesehatan serta Keselamatan Kerja.</p>
+          <br>
+          <p>Sedang di tahun 1970, undang-undang no I mengenai keselamatan kerja dibuat. Undang-undang ini sendiri dibuat jadi alternatif Veiligheids Reglement tahun 1920. Sejarah selanjutnya pada tahun 1969, berdirilah ikatan Higiene Perusahaan, Kesehatan serta keselamatan kerja, serta di tahun 1969 dibuat laboratorium keselamatan kerja.</p>
+          <br>
+          <p>Di tahun 1957, diselenggarakan seminar nasional Higiene Perusahaan serta Keselamatan Kerja K3 dengan topik penerapan Keselamatan Kerja Untuk Pembangunan. Persisnya di bulan Februari 1990, Fakultas Kedokteran Unissula yang bekerja bersama dengan Rumah Sakit Sultan Agung Semarang mengadakan symposium gangguan pendengaran karena kerja yang di buka oleh Menteri Tenaga Kerja Republik Indonesia yang saat itu dijabat oleh Cosmas Batubara.</p>
+        </div>
+        <div class="tab-pane fade" id="Tugas" role="tabpanel" aria-labelledby="contact-tab">
+          <h2>Tugas K3LH</h2>
+          <br>
+          <p>Pertama, mengantisipasi, mengidentifikasi, dan mengevaluasi kondisi dan tindakan berbahaya.</p>
+          <br>
+          <p>Kedua, membuat desain, metode, prosedur dan program pengendalian bahaya.</p>
+          <br>
+          <p>Ketiga, menerapkan, mengelola, dan memberikan saran kepada pihak lain guna mengendalikan bahaya.</p>
+          <br>
+          <p>Keempat, mengukur, mengaudit, dan mengevaluasi efektifitas program pengendalian bahaya.</p>
+        </div>
+        <div class="tab-pane fade" id="Tujuan" role="tabpanel" aria-labelledby="contact-tab">
+          <h2>Tujuan K3LH</h2>
+          <br>
+          <ol>
+            <li>Melindungi tenaga kerja atas hak keselamatannya dalam melakukan pekerjaan untuk kesejahteraan hidup dan meningkatkan produksi dan produktivitas nasional</li>
+            <li>Menjamin keselamatan setiap orang lain yang berada di tempat kerja tersebut.</li>
+            <li>Memeliharan sumber produksi agar dapat digunakan secara aman dan efisien.</li>
+          </ol>
+        </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <!--javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

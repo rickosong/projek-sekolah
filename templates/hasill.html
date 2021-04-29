@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Hasil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+    <link rel="stylesheet" href="{% static 'css/hasill.css' %}" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+  </head>
+  <body>
+     <!--navbar-->
+     <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'image/download.jpg' %}" alt="Logo PDAM Bandarmasih" title="Logo PDAM Bandarmasih"> <span class="Website">Website</span> <span class="K3LH-text">K3LH </span> <span class ="PDAM-text">PDAM Bandarmasih</span></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+  
+                <!--navbar biasa-->
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'serbaserbi' %}">serba-serbi K3LH</a>
+                </li>
+  
+                <!--navbar dropdown-->
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#pendataan" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          pendataan
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{% url 'p3k' %}">Kotak P3K</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{% url 'hasil' %}">Hasil Pendataan Kotak P3K</a>
+                        </li>
+  
+                <!--navbar biasa-->
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" id="navbar-biasa" href="{% url 'profil' %}">profil</a>
+                </li>
+                <li class="nav-item">
+                  <span class="merah"><a class="nav-link js-scroll-trigger" id="navbar-merah" href="{% url 'logout' %}">log out</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+       </div>
+     <!--navbar end-->  
+    
+    <!--table-->
+    <!--table 1-->
+    <div class="container mt-auto">
+      <div class="table-responsive">
+        <table  id="myTable" class="table table-sm table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th colspan="6"><h2>CEKLIST ISI KOTAK P3K</h2></th>
+              </tr>
+            <tr>
+              <th scope="col">LOKASI</th>
+              <th scope="col">TANGGAL ISI</th>
+              <th scope="col">KEADAAN</th>
+              <th scope="col">KETERANGAN</th>
+              <th scope="col">UBAH</th>
+              <th scope="col">HAPUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for Kotak in box %}
+            <tr>
+              <td class="kiri">{{ Kotak.lokasi }}</td>
+              <td>{{ Kotak.tanggal }}</td>
+              <td>{{ Kotak.keadaan }}</td>
+              <td>{{ Kotak.keterangan }}</td>
+              <td>
+                <a href="{% url 'edit' Kotak.id %}" class="btn btn-dark btn-sm">✎</a>
+              </td>
+              <td><a href="{% url 'hapus' Kotak.id %}" class="btn btn-danger btn-sm">✕</a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <br>
+    </div>
+    <br><br><br><br><br><br><br>
+    <!--table end-->
+
+    <!--javascript-->
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'popper.min.js' %}" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+     $(document).ready( function () {
+        $('#myTable').DataTable();
+      } );
+    </script>
+    
+  </body>
+  </body>
+</html>
