@@ -28,7 +28,7 @@ urlpatterns = [
     path('serbaserbi/', serbaserbi, name = 'serbaserbi'),
     path('edit/<str:pk>/', edit, name = 'edit'),
     path('hapus/<str:pk>/', hapus, name = 'hapus'),
-    path('p3k/', p3k, name = 'p3k'),
+    path('pendataan/', pendataan, name = 'p3k'),
     path('hasil/', hasil, name = 'hasil'),
     path('profil/', profil, name = 'profil'),
 ]

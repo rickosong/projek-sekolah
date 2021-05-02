@@ -38,7 +38,7 @@ def serbaserbi(request):
     return render(request, 'serbaserbi.html')
 
 @login_required(login_url='login')
-def p3k(request):
+def pendataan(request):
 
     form = FormPendataan()
     if request.method == 'POST':
